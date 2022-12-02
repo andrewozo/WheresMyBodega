@@ -14,11 +14,13 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.andrew.WheresMyBodega",
+      "config": {
+        "googleMapsApiKey": "AIzaSyBLOym_HUTBCD5D5dd1cr_G2B48CXu1Tzk"
+      }
     },
     "android": {
       "adaptiveIcon": {
