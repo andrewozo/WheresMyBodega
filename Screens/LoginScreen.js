@@ -9,6 +9,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
 import { useNavigation } from "@react-navigation/core";
+import Header from "../components/Header";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -47,6 +48,7 @@ const LoginScreen = () => {
 
   return (
     <KeyboardAvoidingView style={styles.container} behavior="padding">
+      <Header />
       <View style={styles.inputContainer}>
         <TextInput
           placeholder="Email"
