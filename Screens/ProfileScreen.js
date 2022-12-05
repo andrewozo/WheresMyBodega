@@ -1,7 +1,14 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  SafeAreaView,
+} from "react-native";
 import React from "react";
 import { auth } from "../firebase";
 import { useNavigation } from "@react-navigation/core";
+import BottomTab from "../components/BottomTab";
 
 const ProfileScreen = () => {
   const navigation = useNavigation();
@@ -15,12 +22,15 @@ const ProfileScreen = () => {
       .catch((error) => alert(error.message));
   };
   return (
-    <View style={styles.container}>
-      <Text>Email: {auth.currentUser?.email}</Text>
-      <TouchableOpacity style={styles.button} onPress={handleSignOut}>
-        <Text style={styles.buttonText}>Sign Out</Text>
-      </TouchableOpacity>
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        <Text>Email: {auth.currentUser?.email}</Text>
+        <TouchableOpacity style={styles.button} onPress={handleSignOut}>
+          <Text style={styles.buttonText}>Sign Out</Text>
+        </TouchableOpacity>
+      </View>
+      <BottomTab />
+    </SafeAreaView>
   );
 };
 

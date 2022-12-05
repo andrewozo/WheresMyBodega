@@ -103,7 +103,7 @@ const HomeScreen = () => {
             region={{
               longitude: location.coords?.longitude,
               latitude: location.coords?.latitude,
-              longitudeDelta: 0.005,
+              longitudeDelta: 0.05,
               latitudeDelta: 0.0005,
             }}
             showsUserLocation={true}

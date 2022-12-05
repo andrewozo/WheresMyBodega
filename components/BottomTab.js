@@ -4,15 +4,15 @@ import { Divider } from "@rneui/base";
 import { useNavigation } from "@react-navigation/core";
 
 const BottomTab = () => {
-  const navigate = useNavigation();
+  const navigation = useNavigation();
   return (
     <View>
       <Divider width={1} orientation="vertical" />
       <View style={styles.container}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Home")}>
           <Text style={styles.text}>Map</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
           <Text style={styles.text}>Profile</Text>
         </TouchableOpacity>
       </View>
