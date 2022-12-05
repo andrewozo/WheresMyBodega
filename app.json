@@ -1,13 +1,14 @@
 {
   "expo": {
     "name": "WheresMyBodega",
-    "slug": "WheresMyBodega",
+    "slug": "Wheres-My-Bodega",
+    "description": "WheresMyBodega is a App, that takes the users location and allows the user to see the closest 10 bodegas/delis to them.",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./images/2.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./images/2.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

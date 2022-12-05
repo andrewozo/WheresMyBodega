@@ -100,6 +100,12 @@ const HomeScreen = () => {
           <MapView
             provider={PROVIDER_GOOGLE}
             style={styles.map}
+            initialRegion={{
+              longitude: location.coords?.longitude,
+              latitude: location.coords?.latitude,
+              longitudeDelta: 0.05,
+              latitudeDelta: 0.0005,
+            }}
             region={{
               longitude: location.coords?.longitude,
               latitude: location.coords?.latitude,
