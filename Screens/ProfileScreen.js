@@ -9,6 +9,7 @@ import React from "react";
 import { auth } from "../firebase";
 import { useNavigation } from "@react-navigation/core";
 import BottomTab from "../components/BottomTab";
+import Header from "../components/Header";
 
 const ProfileScreen = () => {
   const navigation = useNavigation();
@@ -24,6 +25,7 @@ const ProfileScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
+        <Header />
         <Text>Email: {auth.currentUser?.email}</Text>
         <TouchableOpacity style={styles.button} onPress={handleSignOut}>
           <Text style={styles.buttonText}>Sign Out</Text>
