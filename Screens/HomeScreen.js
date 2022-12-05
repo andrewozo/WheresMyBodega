@@ -5,7 +5,6 @@ import { doc, setDoc, addDoc, collection, getDocs } from "firebase/firestore";
 import axios from "axios";
 import { db } from "../firebase";
 import distance from "../distanceFormula";
-
 import * as Location from "expo-location";
 import BottomTab from "../components/BottomTab";
 import HomeHeader from "../components/HomeHeader";
