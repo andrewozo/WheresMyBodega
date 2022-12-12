@@ -1,4 +1,13 @@
-import { StyleSheet, Text, View, Image, SafeAreaView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  SafeAreaView,
+  Linking,
+  Button,
+  TouchableOpacity,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 import MapView, { PROVIDER_GOOGLE, Marker, Callout } from "react-native-maps";
 import { doc, setDoc, addDoc, collection, getDocs } from "firebase/firestore";
@@ -54,6 +63,7 @@ const HomeScreen = () => {
               distance: bodega?.distance,
               location: bodega?.location?.display_address[0],
               phone: bodega?.display_phone,
+              link: bodega?.url,
             })
               .then(() => {
                 console.log("data submitted");
@@ -90,6 +100,8 @@ const HomeScreen = () => {
       return bodega;
     }
   });
+
+  console.log(bdgaArr.length);
 
   if (location) {
     return (
@@ -137,6 +149,7 @@ const HomeScreen = () => {
                         <Text
                           style={styles.name}
                         >{`${bodega?.rating} Stars`}</Text>
+
                         <Image
                           style={styles.image}
                           source={bodega?.image_url}
