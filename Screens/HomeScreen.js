@@ -100,8 +100,8 @@ const HomeScreen = () => {
       return bodega;
     }
   });
-
-  console.log(bdgaArr.length);
+  let newBdgaArr = bdgaArr.slice(0,11)
+  console.log(newBdgaArr.length);
 
   if (location) {
     return (
@@ -128,7 +128,7 @@ const HomeScreen = () => {
             showsMyLocationButton={true}
             zoomControlEnabled={true}
           >
-            {bdgaArr?.map((bodega) => {
+            {newBdgaArr?.map((bodega) => {
               return (
                 <Marker
                   key={bodega?.id}
